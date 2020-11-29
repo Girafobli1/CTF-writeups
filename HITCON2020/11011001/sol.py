@@ -143,4 +143,4 @@ for i in range(0,20):
 			s.add(nums[i]!=nums[j])
 print(s.check())
 print(s.model())
-#print the solution (z3 is weird so it doesn't print in order
+#print the solution (z3 is weird so it doesn't print in order)
